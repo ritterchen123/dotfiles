@@ -13,8 +13,6 @@ brew tap caskroom/versions
 # daily
 brew cask install spectacle
 brew cask install dropbox
-brew cask install gyazo
-brew cask install onepassword
 brew cask install rescuetime
 brew cask install flux
 brew cask install nosleep
@@ -22,9 +20,9 @@ brew cask install telegram
 brew cask install spotify
 
 # dev
-#brew cask install iterm2
 brew cask install iterm2-nightly
 brew cask install sublime-text
+brew cask install atom
 brew cask install imagealpha
 brew cask install imageoptim
 
@@ -41,3 +39,4 @@ brew cask install vlc
 
 # File Multi Tool 5
 # Wunderlist
+# Lightshot

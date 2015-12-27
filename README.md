@@ -1,8 +1,6 @@
-# Paul's dotfiles
+# Simons's dotfiles
 
-* I maintain this repo as *my* dotfiles, but I'm keenly aware people are using it for theirs.
-* You're quite welcome to make suggestions, however I may decline if it's not of personal value to me.
-* If you're starting off consider forking [mathias](https://github.com/mathiasbynens/dotfiles/) or [alrra](https://github.com/alrra/dotfiles/). paulmillr and gf3 also have great setups
+* These are my dotfiles that I use on my laptop. They are forked from [Paul Irish's Dotfiles](https://github.com/paulirish/dotfiles) and adjusted to my personal needs and preferences. 
 
 ## Setup
 #### installing & using

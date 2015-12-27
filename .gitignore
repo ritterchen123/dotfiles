@@ -29,6 +29,3 @@ Thumbs.db
 fishd.*
 .config/fish/fish_history
 
-# diff-highlight
-bin/diff-highlight
-
