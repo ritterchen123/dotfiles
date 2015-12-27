@@ -1,6 +1,7 @@
 # Simons's dotfiles
 
-* These are my dotfiles that I use on my laptop. They are forked from [Paul Irish's Dotfiles](https://github.com/paulirish/dotfiles) and adjusted to my personal needs and preferences. 
+* These are my dotfiles that I use on my laptop. They are forked from [Paul Irish's Dotfiles](https://github.com/paulirish/dotfiles) and adjusted to my personal needs and preferences.
+* This README is also largely Paul Irish's README.
 
 ## Setup
 #### installing & using
