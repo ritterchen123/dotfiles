@@ -166,18 +166,15 @@ sudo easy_install Pygments
 
 # change to bash 4 (installed by homebrew)
 BASHPATH=$(brew --prefix)/bin/bash
-sudo echo $BASHPATH >> /etc/shells
+echo $BASHPATH | sudo tee -a /etc/shells
 chsh -s $BASHPATH # will set for current user only.
+# in new tab/window
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # Later, confirm iterm settings aren't conflicting.
 
 
 # iterm with more margin! http://hackr.it/articles/prettier-gutter-in-iterm-2/
 #   (admittedly not as easy to maintain)
-
-
-# setting up the sublime symlink
-ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 
 ###
@@ -217,3 +214,7 @@ sh .osx
 
 ###
 ##############################################################################################################
+
+
+# setting up the sublime symlink (needs to be done after symlinks)
+ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
