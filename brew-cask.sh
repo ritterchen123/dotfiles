@@ -36,9 +36,6 @@ brew cask install webkit-nightly
 # less often
 brew cask install disk-inventory-x
 brew cask install vlc
-brew cask install licecap
-brew cask install utorrent
-
 
 # Not on cask but I want regardless.
 
