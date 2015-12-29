@@ -40,7 +40,7 @@
 	changed = green
 	untracked = cyan
 [merge]
-	tool = opendiff
+	tool = Kaleidoscope
 
 
 [color "diff-highlight"]
@@ -86,3 +86,14 @@
 	required = true
 [init]
 	templatedir = ~/.git_template
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
