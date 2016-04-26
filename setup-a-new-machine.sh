@@ -30,6 +30,7 @@ cp -R ~/.gnupg ~/migration/home
 cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration  # wifi
 
 cp ~/Library/Preferences/net.limechat.LimeChat.plist ~/migration
+cp ~/Library/Preferences/com.tinyspeck.slackmacgap.plist ~/migration
 
 cp -R ~/Library/Services ~/migration # automator stuff
 
@@ -142,7 +143,6 @@ npm install --global trash-cli
 
 # github.com/rupa/z   - oh how i love you
 git clone https://github.com/rupa/z.git ~/code/z
-chmod +x ~/code/z/z.sh
 # consider reusing your current .z file if possible. it's painful to rebuild :)
 # z is hooked up in .bash_profile
 
@@ -166,15 +166,19 @@ sudo easy_install Pygments
 
 # change to bash 4 (installed by homebrew)
 BASHPATH=$(brew --prefix)/bin/bash
-echo $BASHPATH | sudo tee -a /etc/shells
+#sudo echo $BASHPATH >> /etc/shells
+sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
 chsh -s $BASHPATH # will set for current user only.
-# in new tab/window
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
 # Later, confirm iterm settings aren't conflicting.
 
 
 # iterm with more margin! http://hackr.it/articles/prettier-gutter-in-iterm-2/
 #   (admittedly not as easy to maintain)
+
+
+# setting up the sublime symlink
+ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 
 ###
@@ -212,9 +216,7 @@ sh .osx
 # symlink it up!
 ./symlink-setup.sh
 
+# add manual symlink for .ssh/config and probably .config/fish
+
 ###
 ##############################################################################################################
-
-
-# setting up the sublime symlink (needs to be done after symlinks)
-ln -sf "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl

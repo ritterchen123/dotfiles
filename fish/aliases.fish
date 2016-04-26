@@ -25,23 +25,25 @@ alias brwe=brew  #typos
 
 alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
-
-# `shellswitch [bash|zsh|fish]`
-function shellswitch
-	chsh -s (brew --prefix)/bin/$argv
-end
-
+alias push="git push"
 
 
 # `cat` with beautiful colors. requires Pygments installed.
 # 							   sudo easy_install -U Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
 
+alias ag='ag -W 200 -f --hidden'
 
+alias diskspace_report="df -P -kHl"
+alias free_diskspace_report="diskspace_report"
+
+alias master="git checkout master"
 
 # Networking. IP address, dig, DNS
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias dig="dig +nocmd any +multiline +noall +answer"
+# wget sucks with certificates. Let's keep it simple.
+alias wget="curl -O"
 
 # Recursively delete `.DS_Store` files
 alias cleanup_dsstore="find . -name '*.DS_Store' -type f -ls -delete"
@@ -54,10 +56,9 @@ alias ungz="gunzip -k"
 # File size
 alias fs="stat -f \"%z bytes\""
 
-# Empty the Trash on all mounted volumes and the main HDD. then clear the useless sleepimage
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash; sudo rm /private/var/vm/sleepimage"
+# emptytrash written as a function
 
 # Update installed Ruby gems, Homebrew, npm, and their installed packages
-alias brew_update="brew -v update; brew -v upgrade --all; brew cleanup; brew cask cleanup; brew prune; brew doctor"
+alias brew_update="brew -v update; brew upgrade --force-bottle --cleanup; brew cleanup; brew cask cleanup; brew prune; brew doctor; npm-check -g -u"
 alias update_brew_npm_gem='brew_update; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update --no-rdoc --no-ri'
 

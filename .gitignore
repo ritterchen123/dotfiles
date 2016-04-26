@@ -7,8 +7,7 @@
 # git credential file
 .gitconfig.local
 
-# JetBrains IntelliJ IDEA (webstorm, pystorm..) settings
-.idea
+
 
 
 # Folder view configuration files
@@ -30,3 +29,5 @@ Thumbs.db
 fishd.*
 .config/fish/fish_history
 
+# random
+shilocation
