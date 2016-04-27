@@ -75,5 +75,7 @@ brew install pidcat   # colored logcat guy
 
 brew install zsh
 
+brew install thefuck
+
 # Remove outdated versions from the cellar
 brew cleanup
