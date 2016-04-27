@@ -86,9 +86,9 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # homebrew completion
-if  which brew > /dev/null; then
-    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-fi;
+# if  which brew > /dev/null; then
+#    source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+# fi;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type __git_complete &> /dev/null; then
@@ -109,7 +109,3 @@ shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
-
-
-
-
