@@ -27,22 +27,11 @@ cp -R ~/.ssh ~/migration/home
 
 cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration  # wifi
 
-cp -R ~/Documents ~/migration
-
 cp ~/.bash_history ~/migration # back it up for fun?
 
 cp ~/.gitconfig.local ~/migration
 
 cp ~/.z ~/migration # z history file.
-
-# iTerm settings.
-  # Prefs, General, Use settings from Folder
-
-# Finder settings and TotalFinder settings
-#   Not sure how to do this yet. Really want to.
-
-# software licenses like sublimetext
-
 
 ### end of old machine backup
 ##############################################################################################################
@@ -118,6 +107,9 @@ npm install --global trash-cli
 # diff-so-fancy for git
 npm install -g diff-so-fancy
 
+# for server()
+npm install -g statik
+
 # github.com/rupa/z   - oh how i love you
 git clone https://github.com/rupa/z.git ~/code/z
 # consider reusing your current .z file if possible. it's painful to rebuild :)
@@ -138,49 +130,9 @@ BASHPATH=$(brew --prefix)/bin/bash
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
 chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
-# Later, confirm iterm settings aren't conflicting.
-
-
-# iterm with more margin! http://hackr.it/articles/prettier-gutter-in-iterm-2/
-#   (admittedly not as easy to maintain)
-
-
-###
-##############################################################################################################
-
-
-
-##############################################################################################################
-### remaining configuration
-###
-
-# go read mathias, paulmillr, gf3, alraa's dotfiles to see what's worth stealing.
-
-# prezto and antigen communties also have great stuff
-#   github.com/sorin-ionescu/prezto/blob/master/modules/utility/init.zsh
 
 # set up osx defaults
-#   maybe something else in here https://github.com/hjuutilainen/dotfiles/blob/master/bin/osx-user-defaults.sh
 sh .osx
 
-# setup and run Rescuetime!
-
-###
-##############################################################################################################
-
-
-
-##############################################################################################################
-### symlinks to link dotfiles into ~/
-###
-
-#   move git credentials into ~/.gitconfig.local    	http://stackoverflow.com/a/13615531/89484
-#   now .gitconfig can be shared across all machines and only the .local changes
-
-# symlink it up!
+# symlinks to link dotfiles into ~/
 ./symlink-setup.sh
-
-# add manual symlink for .ssh/config and probably .config/fish
-
-###
-##############################################################################################################
