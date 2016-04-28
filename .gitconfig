@@ -85,3 +85,6 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[user]
+	name = Simon Selg
+	email = simon@selg.me
