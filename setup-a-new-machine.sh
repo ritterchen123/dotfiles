@@ -3,40 +3,7 @@
   echo "do not run this script in one go. hit ctrl-c NOW"
   read -n 1
 
-
-##############################################################################################################
-###  backup old machine's key items
-
-mkdir -p ~/migration/home
-cd ~/migration
-
-# what is worth reinstalling?
-brew leaves      		> brew-list.txt    # all top-level brew installs
-npm list -g --depth=0 	> npm-g-list.txt
-
-
-# then compare brew-list to what's in `brew.sh`
-#   comm <(sort brew-list.txt) <(sort brew.sh-cleaned-up)
-
-# let's hold on to these
-
-cp ~/.extra ~/migration/home
-cp ~/.z ~/migration/home
-
-cp -R ~/.ssh ~/migration/home
-
-cp /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist ~/migration  # wifi
-
-cp ~/.bash_history ~/migration # back it up for fun?
-
-cp ~/.gitconfig.local ~/migration
-
-cp ~/.z ~/migration # z history file.
-
-### end of old machine backup
-##############################################################################################################
-
-
+sudo -v
 
 ##############################################################################################################
 ### XCode Command Line Tools
@@ -130,9 +97,6 @@ BASHPATH=$(brew --prefix)/bin/bash
 sudo bash -c 'echo $(brew --prefix)/bin/bash >> /etc/shells'
 chsh -s $BASHPATH # will set for current user only.
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
-
-# set up osx defaults
-sh .osx
 
 # symlinks to link dotfiles into ~/
 ./symlink-setup.sh
