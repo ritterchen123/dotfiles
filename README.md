@@ -91,8 +91,6 @@ I have some EXPORTS, my PATH construction, and a few aliases for ssh'ing into my
 I don't know how other folks manage their $PATH, but this is how I do mine:
 
 ```shell
-# The top-most paths override here.
-      PATH=/opt/local/bin
 PATH=$PATH:/opt/local/sbin
 PATH=$PATH:/bin
 PATH=$PATH:~/.rvm/bin
@@ -105,8 +103,6 @@ export PATH
 
 ### Sensible OS X defaults
 
-Mathias's repo is the canonical for this, but you should probably run his or mine after reviewing it.
-
 ```bash
 ./.osx
 ```
@@ -117,4 +113,4 @@ One-off binaries that aren't via an npm global or homebrew. [git open](https://g
 
 ### Syntax highlighting for these files
 
-If you edit this stuff, install [Dotfiles Syntax Highlighting](https://github.com/mattbanks/dotfiles-syntax-highlighting-st2) via [Package Control](http://wbond.net/sublime_packages/package_control)
+If you edit this stuff, install Dotfiles Syntax in Atom/Sublime
